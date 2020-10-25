@@ -66,5 +66,5 @@ menuContainer.insertAdjacentHTML("beforeend", createMenu);
 // console.log('test message');
 // console.log(menuContainer);
 console.log(bodyTheme);
-console.log(localStorage.getItem('current-theme'));
-console.log(themeSwitcher.checked);
+// console.log(localStorage.getItem('current-theme'));
+// console.log(themeSwitcher.checked);
