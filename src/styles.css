@@ -141,10 +141,16 @@ body.dark-theme {
 }
 
 .card__image {
-  height: 300px;
+  height: 100px;
   object-fit: cover;
   max-width: 100%;
 }
+
+/* img {
+  height: 300px;
+  object-fit: cover;
+  max-width: 100%;
+} */
 
 .card__name {
   margin-top: 16px;
