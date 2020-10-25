@@ -41,13 +41,13 @@ function changeTheme(event) {
       
 }
 
-function chosenTheme(){
-// const currentTheme = JSON.parse(localStorage.getItem('current-theme'));
-bodyTheme.classList.add(currentTheme);
-themeSwitcher.checked=currentTheme=='dark-theme'? true : false;
-}
+// function chosenTheme(){
+// const chosen = JSON.parse(localStorage.getItem('current-theme'));
+// bodyTheme.classList.add(chosen);
+// themeSwitcher.checked=chosen=='dark-theme'? true : false;
+// }
 
-chosenTheme()
+// chosenTheme()
 
 const createMenu = menuTemplate(menuList);
 menuContainer.insertAdjacentHTML("beforeend", createMenu);
