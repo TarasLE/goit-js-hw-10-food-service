@@ -14,21 +14,23 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-let currentTheme;
+let currentTheme = Theme.LIGHT;
+// bodyTheme.classList.add(currentTheme);
 
 function changeTheme(event) {
     event.preventDefault(); 
     if (themeSwitcher.checked) {
-        themeSwitcher.checked = false;
+        // themeSwitcher.checked = false;
         currentTheme = Theme.LIGHT;
         localStorage.setItem('current-theme', JSON.stringify(currentTheme))
-        bodyTheme.classList.add(currentTheme);
+        bodyTheme.classList.toggle(Theme.DARK);
         // themeSwitcher.checked = false;
     } else
-        themeSwitcher.checked = true;
+        // themeSwitcher.checked = true;
+        bodyTheme.classList.toggle(Theme.DARK);
         currentTheme = Theme.DARK;
         localStorage.setItem('current-theme', JSON.stringify(currentTheme))
-        bodyTheme.classList.add(currentTheme);
+        // bodyTheme.classList.add(currentTheme);
         // themeSwitcher.checked = true;
    
    
