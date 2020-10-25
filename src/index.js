@@ -16,7 +16,7 @@ const Theme = {
 
 // let currentTheme;
 
-// function changeTheme(event) {
+function changeTheme(event) {
     // event.preventDefault(); 
     // if (themeSwitcher.checked) {
     //     currentTheme = Theme.DARK;
@@ -33,7 +33,7 @@ const Theme = {
     // themeSwitcher.checked = themeChosen == 'dark-theme' ? true : false;
     // body.classList.add(themeChosen ? themeChosen : Theme.LIGHT);
       
-// }
+}
 
 // function chosenTheme(){
 // const currentTheme = JSON.parse(localStorage.getItem('current-theme'));
