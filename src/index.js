@@ -17,15 +17,17 @@ const Theme = {
 // let currentTheme;
 
 function changeTheme(event) {
-    // event.preventDefault(); 
-    // if (themeSwitcher.checked) {
-    //     currentTheme = Theme.DARK;
-    //     localStorage.setItem('current-theme', JSON.stringify(currentTheme))
-    //     bodyTheme.classList.add(currentTheme);
-    // } else 
-    //     currentTheme = Theme.LIGHT;
-    //     localStorage.setItem('current-theme', JSON.stringify(currentTheme))
-    //     bodyTheme.classList.add(currentTheme);
+    event.preventDefault(); 
+    if (themeSwitcher.checked) {
+        currentTheme = Theme.LIGHT;
+        localStorage.setItem('current-theme', JSON.stringify(currentTheme))
+        bodyTheme.classList.add(currentTheme);
+        // themeSwitcher.checked = false;
+    } else 
+        currentTheme = Theme.DARK;
+        localStorage.setItem('current-theme', JSON.stringify(currentTheme))
+        bodyTheme.classList.add(currentTheme);
+        // themeSwitcher.checked = true;
    
    
     // bodyTheme.classList.add(Theme.DARK)
@@ -35,11 +37,11 @@ function changeTheme(event) {
       
 }
 
-// function chosenTheme(){
+function chosenTheme(){
 // const currentTheme = JSON.parse(localStorage.getItem('current-theme'));
-// bodyTheme.classList.add(currentTheme);
-// themeSwitcher.checked=currentTheme=='dark-theme'? true : false;
-// }
+bodyTheme.classList.add(currentTheme);
+themeSwitcher.checked=currentTheme=='dark-theme'? true : false;
+}
 
 const createMenu = menuTemplate(menuList);
 menuContainer.insertAdjacentHTML("beforeend", createMenu);
