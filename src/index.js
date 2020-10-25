@@ -56,7 +56,7 @@ function chosenTheme(){
     } 
 }
 
-chosenTheme()
+// chosenTheme()
 
 const createMenu = menuTemplate(menuList);
 menuContainer.insertAdjacentHTML("beforeend", createMenu);
