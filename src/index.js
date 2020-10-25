@@ -7,8 +7,8 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-// const createMenu = menuTemplate(menuList);
-// console.log(createMenu);
+const createMenu = menuTemplate(menuList);
+console.log(createMenu);
 console.log(menuTemplate);
 console.log(menuList);
 console.log('test message');
