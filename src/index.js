@@ -25,7 +25,7 @@ function changeTheme(event) {
       
 }
 
-bodyTheme.classList.add(localStorage.getItem(current-theme))
+bodyTheme.classList.add(localStorage.getItem('current-theme'));
 
 
 const createMenu = menuTemplate(menuList);
