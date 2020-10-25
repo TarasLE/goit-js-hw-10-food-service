@@ -14,6 +14,8 @@ const Theme = {
 
 function changeTheme(event) {
     
+    bodyTheme.classList.add(Theme.DARK)
+    localStorage.setItem('current-theme', JSON.stringify(Theme.DARK))
 }
 
 const createMenu = menuTemplate(menuList);
