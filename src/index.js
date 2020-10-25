@@ -10,7 +10,7 @@ const Theme = {
 };
 
 const createMenu = menuTemplate(menuList);
-
+menuContainer.insertAdjacentHTML("beforeend", createMenu);
 console.log(createMenu);
 console.log(menuTemplate);
 console.log(menuList);
