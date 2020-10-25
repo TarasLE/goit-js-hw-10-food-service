@@ -19,11 +19,13 @@ let currentTheme;
 function changeTheme(event) {
     event.preventDefault(); 
     if (themeSwitcher.checked) {
+        themeSwitcher.checked = false;
         currentTheme = Theme.LIGHT;
         localStorage.setItem('current-theme', JSON.stringify(currentTheme))
         bodyTheme.classList.add(currentTheme);
         // themeSwitcher.checked = false;
-    } else 
+    } else
+        themeSwitcher.checked = true;
         currentTheme = Theme.DARK;
         localStorage.setItem('current-theme', JSON.stringify(currentTheme))
         bodyTheme.classList.add(currentTheme);
@@ -42,6 +44,8 @@ function chosenTheme(){
 bodyTheme.classList.add(currentTheme);
 themeSwitcher.checked=currentTheme=='dark-theme'? true : false;
 }
+
+chosenTheme()
 
 const createMenu = menuTemplate(menuList);
 menuContainer.insertAdjacentHTML("beforeend", createMenu);
