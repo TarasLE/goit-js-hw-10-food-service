@@ -14,19 +14,32 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
+let currentTheme;
+
 function changeTheme(event) {
     event.preventDefault(); 
-    localStorage.setItem('current-theme', JSON.stringify(Theme.DARK))
-    bodyTheme.classList.add(Theme.DARK)
-    themeSwitcher.checked=true;
+    if (themeSwitcher.checked) {
+        currentTheme = Theme.DARK;
+        localStorage.setItem('current-theme', JSON.stringify(currentTheme))
+        bodyTheme.classList.add(currentTheme);
+    } else 
+        currentTheme = Theme.LIGHT;
+        localStorage.setItem('current-theme', JSON.stringify(currentTheme))
+        bodyTheme.classList.add(currentTheme);
+   
+   
+    // bodyTheme.classList.add(Theme.DARK)
     // const themeChosen = storage.load('current-theme');
     // themeSwitcher.checked = themeChosen == 'dark-theme' ? true : false;
     // body.classList.add(themeChosen ? themeChosen : Theme.LIGHT);
       
 }
 
-bodyTheme.classList.add(JSON.parse(localStorage.getItem('current-theme')));
-
+function chosenTheme(){
+// const currentTheme = JSON.parse(localStorage.getItem('current-theme'));
+bodyTheme.classList.add(currentTheme);
+themeSwitcher.checked=currentTheme=='dark-theme'? true : false;
+}
 
 const createMenu = menuTemplate(menuList);
 menuContainer.insertAdjacentHTML("beforeend", createMenu);
