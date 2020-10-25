@@ -7,19 +7,23 @@ const menuContainer = document.querySelector(".js-menu");
 const themeSwitcher = document.querySelector('#theme-switch-toggle')
 const bodyTheme = document.querySelector("body")
 themeSwitcher.addEventListener('change', changeTheme)
-localStorage.setItem('current-theme', JSON.stringify(Theme.LIGHT))
+
 
 const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 };
 
-function changeTheme() {
+function changeTheme(event) {
+    event.preventDefault(); 
+    localStorage.setItem('current-theme', JSON.stringify(Theme.DARK))
+    bodyTheme.classList.add(Theme.DARK)
+    themeSwitcher.checked=true;
     // const themeChosen = storage.load('current-theme');
     // themeSwitcher.checked = themeChosen == 'dark-theme' ? true : false;
     // body.classList.add(themeChosen ? themeChosen : Theme.LIGHT);
-    bodyTheme.classList.add(Theme.DARK)
-    // themeSwitcher.checked=true;
+   
+    
     
 }
 
