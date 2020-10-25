@@ -14,18 +14,18 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-let currentTheme;
+// let currentTheme;
 
-function changeTheme(event) {
-    event.preventDefault(); 
-    if (themeSwitcher.checked) {
-        currentTheme = Theme.DARK;
-        localStorage.setItem('current-theme', JSON.stringify(currentTheme))
-        bodyTheme.classList.add(currentTheme);
-    } else 
-        currentTheme = Theme.LIGHT;
-        localStorage.setItem('current-theme', JSON.stringify(currentTheme))
-        bodyTheme.classList.add(currentTheme);
+// function changeTheme(event) {
+    // event.preventDefault(); 
+    // if (themeSwitcher.checked) {
+    //     currentTheme = Theme.DARK;
+    //     localStorage.setItem('current-theme', JSON.stringify(currentTheme))
+    //     bodyTheme.classList.add(currentTheme);
+    // } else 
+    //     currentTheme = Theme.LIGHT;
+    //     localStorage.setItem('current-theme', JSON.stringify(currentTheme))
+    //     bodyTheme.classList.add(currentTheme);
    
    
     // bodyTheme.classList.add(Theme.DARK)
@@ -33,13 +33,13 @@ function changeTheme(event) {
     // themeSwitcher.checked = themeChosen == 'dark-theme' ? true : false;
     // body.classList.add(themeChosen ? themeChosen : Theme.LIGHT);
       
-}
+// }
 
-function chosenTheme(){
+// function chosenTheme(){
 // const currentTheme = JSON.parse(localStorage.getItem('current-theme'));
-bodyTheme.classList.add(currentTheme);
-themeSwitcher.checked=currentTheme=='dark-theme'? true : false;
-}
+// bodyTheme.classList.add(currentTheme);
+// themeSwitcher.checked=currentTheme=='dark-theme'? true : false;
+// }
 
 const createMenu = menuTemplate(menuList);
 menuContainer.insertAdjacentHTML("beforeend", createMenu);
@@ -52,3 +52,4 @@ menuContainer.insertAdjacentHTML("beforeend", createMenu);
 // console.log(menuContainer);
 console.log(bodyTheme);
 console.log(localStorage.getItem('current-theme'));
+console.log(themeSwitcher.checked);
