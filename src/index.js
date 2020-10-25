@@ -22,14 +22,14 @@ function changeTheme(event) {
     if (themeSwitcher.checked) {
         // themeSwitcher.checked = false;
         currentTheme = Theme.LIGHT;
-        localStorage.setItem('current-theme', JSON.stringify(currentTheme))
+        localStorage.save('current-theme', body.classList[0])
         bodyTheme.classList.toggle(Theme.DARK);
         // themeSwitcher.checked = false;
     } else
         // themeSwitcher.checked = true;
         bodyTheme.classList.toggle(Theme.DARK);
         currentTheme = Theme.DARK;
-        localStorage.setItem('current-theme', JSON.stringify(currentTheme))
+        localStorage.save('current-theme', body.classList[0])
         // bodyTheme.classList.add(currentTheme);
         // themeSwitcher.checked = true;
    
@@ -44,9 +44,9 @@ function changeTheme(event) {
 function chosenTheme(){
     const chosen = JSON.parse(localStorage.getItem('current-theme'));
     themeSwitcher.checked = chosen == 'dark-theme' ? true : false;
-    // if (themeSwitcher.checked) {
-    //    bodyTheme.classList.add(Theme.DARK);
-    // } 
+    if (themeSwitcher.checked) {
+       bodyTheme.classList.add(Theme.DARK);
+    } 
 }
 
 chosenTheme()
