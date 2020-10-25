@@ -22,10 +22,11 @@ function changeTheme(event) {
     // const themeChosen = storage.load('current-theme');
     // themeSwitcher.checked = themeChosen == 'dark-theme' ? true : false;
     // body.classList.add(themeChosen ? themeChosen : Theme.LIGHT);
-   
-    
-    
+      
 }
+
+bodyTheme.classList.add(localStorage.getItem(current-theme))
+
 
 const createMenu = menuTemplate(menuList);
 menuContainer.insertAdjacentHTML("beforeend", createMenu);
