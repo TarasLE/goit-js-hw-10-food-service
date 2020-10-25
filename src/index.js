@@ -15,6 +15,7 @@ const Theme = {
 function changeTheme(event) {
     
     bodyTheme.classList.add(Theme.DARK)
+    themeSwitcher.inputEl.checked = true;
     localStorage.setItem('current-theme', JSON.stringify(Theme.DARK))
 }
 
