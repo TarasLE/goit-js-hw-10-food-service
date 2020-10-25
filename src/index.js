@@ -14,7 +14,7 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-// let currentTheme;
+let currentTheme;
 
 function changeTheme(event) {
     event.preventDefault(); 
