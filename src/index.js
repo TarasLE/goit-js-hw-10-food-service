@@ -36,7 +36,8 @@ function changeTheme(event) {
 }
 
 function chosenTheme(){
-    
+    const chosen = JSON.parse(localStorage.getItem('current-theme'));
+    themeSwitcher.checked = chosen == 'dark-theme' ? true : false;
     if (themeSwitcher.checked) {
        bodyTheme.classList.add(Theme.DARK);
     } 
