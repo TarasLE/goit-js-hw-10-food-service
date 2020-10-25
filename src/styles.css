@@ -140,17 +140,17 @@ body.dark-theme {
   flex-grow: 1;
 }
 
-.card__image {
-  height: 100px;
-  object-fit: cover;
-  max-width: 100%;
-}
-
-/* img {
+/* .card__image {
   height: 300px;
   object-fit: cover;
   max-width: 100%;
 } */
+
+img {
+  height: 300px;
+  object-fit: cover;
+  max-width: 100%;
+}
 
 .card__name {
   margin-top: 16px;
