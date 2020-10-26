@@ -1,7 +1,7 @@
 import './styles.css';
 import menuList from './menu.json';
 import menuTemplate from '../templates/menu-card.hbs';
-
+import { menuContainer } from './selectors';
 
 // const menuContainer = document.querySelector(".js-menu");
 // const themeSwitcher = document.querySelector('#theme-switch-toggle')
